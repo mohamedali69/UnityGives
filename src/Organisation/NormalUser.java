@@ -7,6 +7,7 @@ public class NormalUser extends User {
 
     @Override
     public void menu() {
-        System.out.print("Normal User Menu\n");
+        System.out.print("1. View Event\n");
+        System.out.print("2. Exit\n");
     }
 }
