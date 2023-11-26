@@ -25,7 +25,7 @@ public class Main {
                 System.out.println("Thank you for using the Organisation Management System!");
                 break;
             default:
-                System.out.println("Invalid option !");
+                System.out.println("Invalid option!");
                 break;
         }
     }
