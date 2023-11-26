@@ -1,6 +1,6 @@
 package Organisation;
 
-public class User {
+public abstract class User {
     protected String name;
     protected String email;
     protected String password;
@@ -48,4 +48,6 @@ public class User {
     public String toString() {
         return "Name: " + this.name + "\nEmail: " + this.email + "\nPassword: " + this.password + "\nRole: " + this.role;
     }
+
+    abstract public void menu();
 }

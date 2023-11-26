@@ -1,6 +1,7 @@
 import Organisation.Admin;
 import Organisation.Database;
 import Organisation.NormalUser;
+import Organisation.User;
 
 import java.util.Scanner;
 public class Main {
@@ -21,6 +22,7 @@ public class Main {
                 String password = input.next();
                 if(newDatabase.login(email, password) != -1){
                     System.out.println("Login successful!\n"+"Welcome "+newDatabase.getUser(newDatabase.login(email, password)).getName()+"!\n");
+                    newDatabase.getUser(newDatabase.login(email, password)).menu();
                 }
                 else{
                     System.out.println("Invalid email or password!");
@@ -35,12 +37,16 @@ public class Main {
                 password = input.next();
                 System.out.println("Please enter your role:"+ "\n1. Admin\n2. Normal User\n");
                 int role = input.nextInt();
+                User user;
                 if(role == 1){
-                    Admin admin = new Admin(name, email, password, "Admin");
-                    newDatabase.addUser(admin);                }
+                    user = new Admin(name, email, password, "Admin");
+                    newDatabase.addUser(user);
+                    user.menu();
+                }
                 else if(role == 2){
-                    NormalUser normalUser = new NormalUser(name, email, password, "Normal User");
-                    newDatabase.addUser(normalUser);
+                    user = new NormalUser(name, email, password, "Normal User");
+                    newDatabase.addUser(user);
+                    user.menu();
                 }
                 else{
                     System.out.println("Invalid role!");
