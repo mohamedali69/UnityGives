@@ -5,7 +5,7 @@ public abstract class User {
     protected String email;
     protected String password;
     protected String role;
-
+    protected IOOperation[] operations;
     public User(String name, String email, String password, String role) {
         this.name = name;
         this.email = email;
@@ -49,5 +49,5 @@ public abstract class User {
         return "Name: " + this.name + "\nEmail: " + this.email + "\nPassword: " + this.password + "\nRole: " + this.role;
     }
 
-    abstract public void menu();
+    abstract public void menu(Database database, User user);
 }
