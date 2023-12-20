@@ -62,4 +62,7 @@ public class Event {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public void menu(Database database, User user) {
+    }
 }
