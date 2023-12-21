@@ -19,7 +19,6 @@ public class AddEvent implements IOOperation{
         event.setDescription(s.next());
         database.AddEvent(event);
         System.out.println("Event Added Successfully");
-        s.close();
         event.menu(database, user);
 
     }
