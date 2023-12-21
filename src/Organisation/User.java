@@ -45,9 +45,7 @@ public abstract class User {
         this.role = role;
     }
 
-    public String toString() {
-        return "Name: " + this.name + "\nEmail: " + this.email + "\nPassword: " + this.password + "\nRole: " + this.role;
-    }
+    abstract public String toString();
 
     abstract public void menu(Database database, User user);
 }

@@ -16,11 +16,7 @@ public class Event {
     }
 
     public String toString() {
-        String text = "Event Name :" + name +
-                "Event Type :" + type +
-                "Event Date :" + eventDate +
-                "Event location :" + location +
-                "Event Description :" + description;
+        String text = name+"<N/>"+type+"<N/>"+ eventDate+"<N/>"+location+"<N/>"+ description;
         return  text;
     }
     public String getName() {

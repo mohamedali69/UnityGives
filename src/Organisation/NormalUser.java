@@ -22,4 +22,7 @@ public class NormalUser extends User {
         int n = s.nextInt();
         this.operations[n-1].oper(database, user);
     }
+    public String toString(){
+        return name+"<N/>"+email+"<N/>"+password+"<N/>"+"Normal User";
+    }
 }

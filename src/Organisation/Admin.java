@@ -11,7 +11,9 @@ public class Admin extends User {
                 new AddEvent(),
                 new DeleteEvent(),
                 new Search(),
-                new ViewDonators(),
+                new DeleteAllData(),
+                new ViewVolunteering(),
+                new AddVolunteering(),
                 new Exit()
     };
     }
@@ -20,13 +22,17 @@ public class Admin extends User {
     public void menu(Database database, User user) {
         System.out.print("1. View Events\n");
         System.out.print("2. Add Events\n");
-        System.out.print("3. View Team\n");
-        System.out.print("4. Add Team\n");
-        System.out.print("5. View Volunteer\n");
-        System.out.print("6. Add Volunteer\n");
-        System.out.print("7. Exit\n");
+        System.out.print("3. Delete Event\n");
+        System.out.print("4. Search\n");
+        System.out.print("5. Delete All Data\n");
+        System.out.print("6. View Volunteer\n");
+        System.out.print("7. Add Volunteer\n");
+        System.out.print("8. Exit\n");
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         this.operations[n-1].oper(database, user);
+    }
+    public String toString(){
+        return name+"<N/>"+email+"<N/>"+password+"<N/>"+"Admin";
     }
 }
