@@ -11,10 +11,10 @@ public class DeleteEvent implements IOOperation{
         int i = database.getEvent(eventname);
         if(i>-1){
             database.deleteEvent(i);
-            System.out.println("Vook deleted successfully!");
+            System.out.println("Event deleted successfully!");
             user.menu(database,user);
         }else{
-            System.out.println("Book doesn't exist");
+            System.out.println("Event doesn't exist");
             user.menu(database,user);
         }
     }

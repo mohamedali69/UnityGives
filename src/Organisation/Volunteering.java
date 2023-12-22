@@ -35,12 +35,12 @@ public class Volunteering {
     public void setDonation(String donation) {
         this.donation = donation;
     }
-    public String toString() {
-        return "Event name:" +event.getName()+"\n"+
-                "Username:" +user.getName()+"\n"+
-                "Donation" + donation;
-    }
-    public String toString2(){
+//    public String toString() {
+//        return "Event name:" +event.getName()+"\n"+
+//                "Username:" +user.getName()+"\n"+
+//                "Donation" + donation;
+//    }
+    public String toString(){
         return event.getName()+"<N/>"+user.getName()+"<N/>"+donation;
     }
 }
